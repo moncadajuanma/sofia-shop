@@ -1,41 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>Shopia</title>
-</head>
 
-<body>
-    <header class="header">
-        <a href="home.html" class="logo"><img src="img/logo4.jpeg" alt="Logo Shopia"></a>
-        <nav class="navbar">
-            <a href="home.html">inicio</a>
-            <a href="products.html">productos</a>
-            <a href="about.html">nosotros</a>
-            <a href="contact.html">contacto</a>
-            <a href="account.html">mi cuenta</a>
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        </nav>
-    </header>
+    {% block content %}
 
     <section class="home">
         <h1>Transforma tu <span>look</span>, transforma</span><br>tu <span>vida</span>.</h1>
         <p>Desde el cuidado de la piel hasta el maquillaje, tenemos todo lo que necesitas para brillar con confianza. En nuestra tienda encontraras productos de confianza que realmente funcionan, porque tu piel merece lo mejor.</p>
-        <a href="products.html" class="btn">comprar ahora <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        <a href="{% url 'products' %}" class="btn">comprar ahora <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
     </section>
 
     <div class="pictures">
         <!-- <img src="/img/bioaqua1.jpg" alt=""> -->
-        <img src="/img/bioaqua2.jpg" alt="">
-        <!-- <img src="/img/bioaqua3.jpg" alt=""> -->
-        <!-- <img src="/img/bioaqua4.jpg" alt=""> -->
-        <img src="/img/bioaqua5.jpg" alt="">
-        <img src="/img/bioaqua6.jpg" alt="">
-        <img src="/img/bioaqua7.jpg" alt="">
-        <!-- <img src="/img/bioaqua8.jpg" alt=""> -->
+        <img src="{% static '/img/bioaqua2.jpg' %}" alt="{% static '/img/bioaqua2.jpg' %}">
+        <!-- <img src="{% static '/img/bioaqua3.jpg' %}" alt="{% static '/img/bioaqua3.jpg' %}"> -->
+        <!-- <img src="{% static '/img/bioaqua4.jpg' %}" alt="{% static '/img/bioaqua4.jpg' %}"> -->
+        <img src="{% static '/img/bioaqua5.jpg' %}" alt="{% static '/img/bioaqua5.jpg' %}">
+        <img src="{% static '/img/bioaqua6.jpg' %}" alt="{% static '/img/bioaqua6.jpg' %}">
+        <img src="{% static '/img/bioaqua7.jpg' %}" alt="{% static '/img/bioaqua7.jpg' %}">
+        <!-- <img src="{% static '/img/bioaqua8.jpg' %}" alt="{% static '/img/bioaqua8.jpg' %}"> -->
 
     </div>
 
@@ -43,7 +28,7 @@
         <h3>productos destacados</h3>
         <div class="box-container">
             <div class="box">
-                <img src="/img/bioaqua4.jpg" alt="">
+              <img src="{% static '/img/bioaqua4.jpg' %}" alt="{% static '/img/bioaqua4.jpg' %}">
                 <h3>nombre</h3>
                 <div class="stars">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -55,7 +40,7 @@
                 <p>$ 15.000</p>
             </div>
             <div class="box">
-                <img src="/img/bioaqua5.jpg" alt="">
+              <img src="{% static '/img/bioaqua5.jpg' %}" alt="{% static '/img/bioaqua5.jpg' %}">
                 <h3>nombre</h3>
                 <div class="stars">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -67,7 +52,7 @@
                 <p>$ 12.000</p>
             </div>
             <div class="box">
-                <img src="/img/bioaqua6.jpg" alt="">
+              <img src="{% static '/img/bioaqua6.jpg' %}" alt="{% static '/img/bioaqua6.jpg' %}">
                 <h3>nombre</h3>
                 <div class="stars">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -79,7 +64,7 @@
                 <p>$ 18.000</p>
             </div>
             <div class="box">
-                <img src="/img/bioaqua7.jpg" alt="">
+              <img src="{% static '/img/bioaqua7.jpg' %}" alt="{% static '/img/bioaqua7.jpg' %}">
                 <h3>nombre</h3>
                 <div class="stars">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -97,7 +82,7 @@
         <h3>ultimos productos</h3>
         <div class="box-container">
             <div class="box">
-                <img src="/img/bioaqua8.jpg" alt="">
+              <img src="{% static '/img/bioaqua8.jpg' %}" alt="{% static '/img/bioaqua8.jpg' %}">
                 <h3>nombre</h3>
                 <div class="stars">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -109,7 +94,7 @@
                 <p>$ 15.000</p>
             </div>
             <div class="box">
-                <img src="/img/bioaqua9.jpg" alt="">
+              <img src="{% static '/img/bioaqua9.jpg' %}" alt="{% static '/img/bioaqua9.jpg' %}">
                 <h3>nombre</h3>
                 <div class="stars">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -121,7 +106,7 @@
                 <p>$ 12.000</p>
             </div>
             <div class="box">
-                <img src="/img/bioaqua10.jpg" alt="">
+              <img src="{% static '/img/bioaqua10.jpg' %}" alt="{% static '/img/bioaqua10.jpg' %}">
                 <h3>nombre</h3>
                 <div class="stars">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -133,7 +118,7 @@
                 <p>$ 18.000</p>
             </div>
             <div class="box">
-                <img src="/img/bioaqua11.jpg" alt="">
+              <img src="{% static '/img/bioaqua11.jpg' %}" alt="{% static '/img/bioaqua11.jpg' %}">
                 <h3>nombre</h3>
                 <div class="stars">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -159,7 +144,7 @@
                 producto uniformemente para <br> manchas de acné y masajea 
                 suavemente hasta que se absorba.</p>
             </p>
-            <a href="#" class="btn">comprar ahora<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+            <a href="{% url 'products' %}" class="btn">comprar ahora<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
     </section>
 
     <section class="clients">
@@ -177,7 +162,7 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star-half" aria-hidden="true"></i>
                     </div>
-                    <img src="/img/rostro.webp" alt="">
+                    <img src="{% static '/img/rostro3.jpeg' %}" alt="{% static '/img/rostro3.jpeg' %}">
                     <span>Cliente satisfecho</span>
             </div>
             <div class="box">
@@ -193,39 +178,13 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-half" aria-hidden="true"></i>
                 </div>
-                <img src="/img/rostro3.jpeg" alt="">
+                <img src="{% static '/img/rostro1.jpg' %}" alt="{% static '/img/rostro3.jpg' %}">
                 <span>Cliente satisfecho</span>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="box-container">
-            <div class="box">
-                <h3>Accesos Rapidos</h3>
-                <a href="home.html">inicio</a>
-                <a href="products.html">productos</a>
-                <a href="about.html">nosotros</a>
-                <a href="contact.html">contacto</a>
-                <a href="account.html">mi cuenta</a>
-            </div>
-            <div class="box">
-                <h3>Siguenos</h3>
-                <a href="#">Facebook</a>
-                <a href="#">Intagram</a>
-                <a href="#">Youtube</a>
-            </div>
-            <div class="box">
-                <h3>Contactanos</h3>
-                <a href="#">Telefono: 3158915440</a>
-                <a href="#">Email: juanm-moncada@hotmail.com</a>
-                <a href="#">Direccion: Urb Entre Verdes Mz 9 Casa 27</a>
-            </div>
-        </div>
-        <div class="credit">Created by <span>Juan Manuel Moncada Orjuela - 2025</span></div>
-    </footer>
+    {% endblock %}
 
-<script></script>
-</body>
 
 </html>

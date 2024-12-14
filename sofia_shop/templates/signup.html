@@ -3,6 +3,9 @@
 <form action="" method="POST">
     
     {% csrf_token %}
+
+    <h3 color="red">{{message}}</h3>
+
     {{form.as_p}}
 
     <button type="submit">Registrarse</button>

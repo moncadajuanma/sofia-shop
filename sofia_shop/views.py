@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.http import HttpResponse
@@ -22,6 +22,9 @@ def details(request):
 def home(request):
     return render(request, 'home.html')
 
+def login(request):
+    return render(request, 'login.html')
+
 def products(request):
     return render(request, 'products.html')
 
@@ -35,10 +38,14 @@ def signup(request):
             try:
                 user = User.objects.create_user(username=request.POST['username'], password=request.POST['password1'])
                 user.save()
-                return HttpResponse('Usuario creado satisfactoriamente!')
+                message = "Usuario ya existe!"
+                return render(request, 'signup.html',{
+                    'form': UserCreationForm, 'message': message
+                })
             except:
-                return HttpResponse('El usuario ya existe!')
+                message = "Usuario ya existe!"
+                return render(request, 'signup.html',{
+                    'form': UserCreationForm, 'message': message
+                })
             
         return HttpResponse('Contraseñas no coinciden!')
-
-    

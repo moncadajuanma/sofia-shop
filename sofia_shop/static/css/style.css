@@ -48,11 +48,16 @@ html {
 .header .logo img {
   height: 15rem;
   border-radius: 50rem;
+  margin: 0 1rem;
+}
+.header .navbar{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .header .navbar a {
   font-size: 2rem;
   color: var(--black);
-  margin-right: 2rem;
   text-decoration: none;
 }
 .header .navbar a:hover {
@@ -62,6 +67,7 @@ html {
 .header .navbar i {
   font-size: 2rem;
   color: var(--black);
+  margin: .5rem;
 }
 .header .navbar i:hover {
   color: var(--main-color);

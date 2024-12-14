@@ -1,0 +1,16 @@
+{% load static %}
+
+<header class="header">
+  <a href="{% url 'home' %}" class="logo"><img src="{% static '/img/logo3.jpeg' %}" alt="Logo Shopia"></a>
+  <nav class="navbar">
+      <a href="{% url 'home' %}">inicio</a>
+      <a href="{% url 'products' %}">productos</a>
+      <a href="{% url 'about' %}">nosotros</a>
+      <a href="{% url 'contact' %}">contacto</a>
+      <a href="{% url 'account' %}">mi cuenta</a>
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+  </nav>
+</header>
+
+
+
