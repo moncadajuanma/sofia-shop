@@ -20,7 +20,7 @@ def details(request):
     return render(request, 'details.html')
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 def login(request):
     return render(request, 'login.html')
